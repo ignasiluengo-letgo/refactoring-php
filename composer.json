@@ -1,0 +1,45 @@
+{
+  "name":"ignasiluengo-letgo/refactoring-php",
+  "description":"Refactoring exercises from Refactoring by Martin Fowler",
+  "keywords":[
+    "refactoring",
+    "exercises"
+  ],
+  "homepage":"https://github.com/ignasiluengo-letgo/refactoring-php",
+  "type":"application",
+  "license":"MIT",
+  "authors":[
+    {
+      "name":"Ignasi Luengo",
+      "email":"ignasi.luengo@letgo.com",
+      "homepage":"https://letgo.com"
+    }
+  ],
+  "require":{
+    "php":"^7.1"
+  },
+  "require-dev":{
+    "phpunit/phpunit":"^7.5"
+  },
+  "autoload":{
+    "psr-4":{
+      "VideoRental\\":"src/VideoRental"
+    }
+  },
+  "autoload-dev":{
+    "psr-4":{
+      "VideoRental\\":"tests/VideoRental"
+    }
+  },
+  "scripts":{
+    "test":[
+      "parallel-lint . --exclude vendor",
+      "phpunit"
+    ]
+  },
+  "config":{
+    "sort-packages":true,
+    "bin-dir": "bin/",
+    "preferred-install": "dist"
+  }
+}
